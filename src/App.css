@@ -1,24 +1,67 @@
-body{
+/* Global Styles */
+body {
     margin: 0;
-    background-color: rgb(228,228,228);
+    background-color: rgb(228, 228, 228);
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+/* Custom Scrollbar */
+::-webkit-scrollbar {
     width: 3px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-::-webkit-scrollbar-thumb{
-    background: #888 ;
+::-webkit-scrollbar-thumb {
+    background: #888;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, less than 600px) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Adjust text size for small screens */
+    }
+
+    ::-webkit-scrollbar {
+        width: 2px;
+        /* Narrower scrollbar on smaller screens */
+    }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    body {
+        font-size: 16px;
+        /* Slightly larger font for tablets */
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+        /* Adjust scrollbar width for tablets */
+    }
+}
+
+/* Large devices (laptops/desktops, greater than 900px) */
+@media only screen and (min-width: 900px) {
+    body {
+        font-size: 18px;
+        /* Larger font size for laptops */
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        /* Larger scrollbar for bigger screens */
+    }
 }

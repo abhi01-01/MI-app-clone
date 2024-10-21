@@ -1,17 +1,42 @@
-.NavCard{
+/* Default styles for large screens (laptops and desktops) */
+.NavCard {
     width: 20vmax;
     text-align: center;
     cursor: pointer;
 }
 
-.NavCard > img{
+.NavCard>img {
     width: 20vmax;
 }
 
-.NavCard > p{
+.NavCard>p {
     margin: 0;
 }
 
-.NavCard > span{
+.NavCard>span {
     color: orangered;
+}
+
+/* Styles for tablets (screens up to 1024px) */
+@media only screen and (max-width: 1024px) {
+    .NavCard {
+        width: 30vmax;
+        /* Adjusted size for tablet */
+    }
+
+    .NavCard>img {
+        width: 30vmax;
+    }
+}
+
+/* Styles for phones (screens up to 768px) */
+@media only screen and (max-width: 768px) {
+    .NavCard {
+        width: 40vmax;
+        /* Adjusted size for phone */
+    }
+
+    .NavCard>img {
+        width: 40vmax;
+    }
 }

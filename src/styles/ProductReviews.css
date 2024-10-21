@@ -1,6 +1,29 @@
-.ProductReviews{
+/* Default styles (for larger screens, such as laptops) */
+.ProductReviews {
     display: flex;
     width: 90vw;
     margin: auto;
     justify-content: center;
+}
+
+/* Styles for tablets (portrait and landscape mode) */
+@media screen and (max-width: 1024px) {
+    .ProductReviews {
+        width: 95vw;
+        /* Slightly narrower for tablet screens */
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+    }
+}
+
+/* Styles for mobile phones (small screens) */
+@media screen and (max-width: 768px) {
+    .ProductReviews {
+        width: 100vw;
+        /* Full width for mobile screens */
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 10px;
+        /* Add some padding for better spacing */
+    }
 }

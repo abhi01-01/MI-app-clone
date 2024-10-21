@@ -1,4 +1,5 @@
-.nav{
+/* Default styles (for large screens like laptops and desktops) */
+.nav {
     z-index: 1000;
     background-color: white;
     padding: 1vmax;
@@ -6,58 +7,145 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgba(43,43,43,0.137);
+    border-bottom: 1px solid rgba(43, 43, 43, 0.137);
 }
 
-.logo{
+.logo {
     background-color: orangered;
     width: 58px;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    right:3vmax;
+    right: 3vmax;
 }
 
-#logoImage{
+#logoImage {
     transition: all 0.2s;
     transform: translateX(-58px);
 }
 
-#logoImage:hover{
+#logoImage:hover {
     transform: translateX(0);
 }
 
-
-.navlinks{
-   color: rgb(59,59,59);
-   text-decoration: none;
-   margin: 1vmax 1.2vmax;
-   font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
-   font-weight: 500;
-   font-size: 1.1vmax;
+.navlinks {
+    color: rgb(59, 59, 59);
+    text-decoration: none;
+    margin: 1vmax 1.2vmax;
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 1.1vmax;
 }
 
-.navlinks:hover{
+.navlinks:hover {
     color: orangered;
     text-decoration: none;
 }
 
-.searchbox{
+.searchbox {
     position: relative;
     left: 5vmax;
 }
 
-.searchbox > input{
+.searchbox>input {
     border: none;
-    border-bottom: 1px solid rgba(128,128,128,0.76);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.76);
     width: 15vmax;
     font-size: 1.1vmax;
     outline: none;
-    color: rgb(61,61,61);
+    color: rgb(61, 61, 61);
     font-weight: 100;
 }
 
-.searchbox > svg{
-    fill: rgb(61,61,61);
+.searchbox>svg {
+    fill: rgb(61, 61, 61);
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+    .nav {
+        flex-direction: column;
+        padding: 2vmax;
+    }
+
+    .logo {
+        right: 0;
+        margin-bottom: 1vmax;
+    }
+
+    .navlinks {
+        font-size: 1.4vmax;
+        margin: 0.8vmax;
+    }
+
+    .searchbox {
+        left: 0;
+        margin-top: 1vmax;
+    }
+
+    .searchbox>input {
+        width: 20vmax;
+        font-size: 1.4vmax;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 3vmax;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    #logoImage {
+        transform: translateX(-50px);
+    }
+
+    .navlinks {
+        font-size: 1.8vmax;
+        margin: 1vmax;
+    }
+
+    .searchbox {
+        width: 100%;
+        left: 0;
+        margin-top: 2vmax;
+    }
+
+    .searchbox>input {
+        width: 80%;
+        font-size: 1.6vmax;
+    }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        padding: 4vmax;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    #logoImage {
+        transform: translateX(-40px);
+    }
+
+    .navlinks {
+        font-size: 2vmax;
+        margin: 1.5vmax;
+    }
+
+    .searchbox>input {
+        width: 90%;
+        font-size: 2vmax;
+    }
 }

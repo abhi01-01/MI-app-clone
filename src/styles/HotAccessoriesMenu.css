@@ -1,18 +1,49 @@
-.HotAccessoriesMenu{
+.HotAccessoriesMenu {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    /* Allows wrapping for smaller screens */
 }
 
-.HotAccessoriesLink{
+/* Default styles (for laptops and larger screens) */
+.HotAccessoriesLink {
     text-decoration: none;
-    color: rgb(94,94,94);
+    color: rgb(94, 94, 94);
     margin: 1vmax;
     padding: 0.5vmax 0;
-    font-family:'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.HotAccessoriesLink:hover{
+.HotAccessoriesLink:hover {
     text-decoration: none;
     color: orangered;
     border-bottom: 1px solid orangered;
+}
+
+/* For tablets (between 768px and 1024px wide) */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .HotAccessoriesMenu {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .HotAccessoriesLink {
+        margin: 1.5vmax;
+        padding: 0.8vmax;
+        font-size: 1.1rem;
+    }
+}
+
+/* For phones (less than 768px wide) */
+@media only screen and (max-width: 768px) {
+    .HotAccessoriesMenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HotAccessoriesLink {
+        margin: 2vmax;
+        padding: 1vmax;
+        font-size: 1rem;
+    }
 }

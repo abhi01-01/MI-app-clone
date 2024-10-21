@@ -1,23 +1,59 @@
-.HotAccessories{
+.HotAccessories {
     display: flex;
     width: 90vw;
     margin: auto;
 }
 
-.HotAccessories > div:first-child > img{
+/* Style for larger screens (Laptops) */
+.HotAccessories>div:first-child>img {
     cursor: pointer;
     right: 10px;
     width: 22vw;
     transition: all 0.25s;
-
 }
 
-.HotAccessories > div:first-child >img:hover{
+.HotAccessories>div:first-child>img:hover {
     transform: translateY(-0.4vmax);
-    box-shadow: 0px 6px 15px rgba(53,53,53,0.363);
+    box-shadow: 0px 6px 15px rgba(53, 53, 53, 0.363);
 }
 
-.HotAccessories > div:last-child{
+.HotAccessories>div:last-child {
     display: flex;
     flex-wrap: wrap;
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 1024px) {
+    .HotAccessories {
+        flex-direction: column;
+        /* Stacks elements vertically on tablets */
+        align-items: center;
+    }
+
+    .HotAccessories>div:first-child>img {
+        width: 30vw;
+        /* Larger image size for tablets */
+    }
+
+    .HotAccessories>div:last-child {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Media Queries for Mobile Phones */
+@media (max-width: 600px) {
+    .HotAccessories {
+        flex-direction: column;
+        /* Vertical layout for small screens */
+    }
+
+    .HotAccessories>div:first-child>img {
+        width: 80vw;
+        /* Full width for images on mobile */
+    }
+
+    .HotAccessories>div:last-child {
+        justify-content: center;
+    }
 }

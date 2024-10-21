@@ -1,20 +1,61 @@
-.starProduct{
+.starProduct {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1vmax auto;
+    margin: 2vmax auto;
 }
 
-.starProduct > div:last-child{
+/* Default styling for larger screens (desktops/laptops) */
+.starProduct>div:last-child {
     display: flex;
     flex-wrap: wrap;
     width: 46%;
 }
 
-.starProduct img{
+.starProduct img {
     transition: all 0.5s;
 }
 
-.starProduct img:hover{
-    box-shadow: 6px 6px 15px rgba(53,53,53,0.363);
+.starProduct img:hover {
+    box-shadow: 6px 6px 15px rgba(53, 53, 53, 0.363);
+}
+
+/* Tablet and smaller devices */
+@media (max-width: 1024px) {
+    .starProduct>div:last-child {
+        width: 60%;
+        /* Adjust width for tablets */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .starProduct {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+    }
+
+    .starProduct>div:last-child {
+        width: 80%;
+        /* Increase width to fit content on small screens */
+    }
+
+    .starProduct img {
+        width: 100%;
+        /* Ensure images take full width on mobile */
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+    .starProduct>div:last-child {
+        width: 90%;
+        /* Make it almost full width for very small screens */
+    }
+
+    .starProduct img {
+        width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+    }
 }

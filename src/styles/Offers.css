@@ -1,15 +1,60 @@
-.offersSection{
+/* Base styles */
+.offersSection {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1vmax;
+    flex-wrap: wrap;
+    /* Allows wrapping for smaller screens */
 }
 
-.offersSection img{
+.offersSection img {
     margin: 0 1vmax;
     transition: all 0.5s;
+    max-width: 100%;
+    /* Ensure images don't overflow */
 }
 
-.offersSection img:hover{
-    box-shadow: 6px 6px 15px rgba(53,53,53,0.363);
+.offersSection img:hover {
+    box-shadow: 6px 6px 15px rgba(53, 53, 53, 0.363);
+}
+
+/* Media queries for responsiveness */
+
+/* For small phones (portrait), max-width 600px */
+@media only screen and (max-width: 600px) {
+    .offersSection {
+        flex-direction: column;
+        /* Stack images vertically */
+        padding: 2vmax;
+    }
+
+    .offersSection img {
+        width: 80%;
+        /* Adjust image size */
+        margin-bottom: 1vmax;
+    }
+}
+
+/* For tablets and smaller laptops, max-width 1024px */
+@media only screen and (max-width: 1024px) {
+    .offersSection {
+        padding: 2vmax;
+    }
+
+    .offersSection img {
+        width: 40%;
+        /* Adjust image size */
+    }
+}
+
+/* For laptops and desktops, max-width 1440px */
+@media only screen and (max-width: 1440px) {
+    .offersSection {
+        padding: 1.5vmax;
+    }
+
+    .offersSection img {
+        width: 30%;
+    }
 }

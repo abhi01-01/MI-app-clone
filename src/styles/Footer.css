@@ -1,46 +1,47 @@
-.footer{
+/* Default styles for larger screens (laptops, desktops) */
+.footer {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
     padding: 4.5vmax;
-    background-color: rgb(37,37,37);
-    color: rgb(197,197,197);
+    background-color: rgb(37, 37, 37);
+    color: rgb(197, 197, 197);
 }
 
-.footer > div{
+.footer>div {
     margin: 1vmax;
     display: flex;
     flex-direction: column;
 }
 
-.footer > div:nth-child(2){
+.footer>div:nth-child(2) {
     display: block;
 }
 
-.footer > div:nth-child(2) > a{
+.footer>div:nth-child(2)>a {
     display: inline-block;
 }
 
-.footer > div > a{
-    color: rgb(197,197,197);
+.footer>div>a {
+    color: rgb(197, 197, 197);
     font-size: 1vmax;
     text-decoration: none;
     margin: 0.6vmax 0;
 }
 
-.footer > div > a:hover{
+.footer>div>a:hover {
     color: white;
 }
 
-.footer > div:last-child > div{
+.footer>div:last-child>div {
     width: 45%;
     margin: 1vmax 0;
     font-size: 0.8vmax;
 }
 
-.footer > div:last-child > button{
+.footer>div:last-child>button {
     width: 50%;
     border: 1px solid white;
-    background-color: rgb(37,37,37);
+    background-color: rgb(37, 37, 37);
     color: white;
     padding: 0.6vmax 0;
     font-size: 0.98vmax;
@@ -49,22 +50,68 @@
     transition: all 0.5s;
 }
 
-.footer > div:last-child > button:hover{
-    background-color: rgb(248,244,244);
-    color: black
+.footer>div:last-child>button:hover {
+    background-color: rgb(248, 244, 244);
+    color: black;
 }
 
-.footerBorder{
-    background-color: rgb(37,37,37);
+.footerBorder {
+    background-color: rgb(37, 37, 37);
     color: white;
 }
 
-.footerBorder > div{
-    border-top: 1px solid rgba(197,197,197,0.185);
-    color: rgb(197,197,197);
+.footerBorder>div {
+    border-top: 1px solid rgba(197, 197, 197, 0.185);
+    color: rgb(197, 197, 197);
     width: 90vmax;
     margin: auto;
     padding: 2vmax;
-    font-size: 00.98vmax;
+    font-size: 0.98vmax;
 }
 
+/* Tablet view (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 3vmax;
+    }
+
+    .footer>div>a {
+        font-size: 1.2vmax;
+    }
+
+    .footer>div:last-child>div {
+        width: 60%;
+        font-size: 0.9vmax;
+    }
+
+    .footer>div:last-child>button {
+        font-size: 1.1vmax;
+    }
+}
+
+/* Phone view (below 768px) */
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr;
+        padding: 2vmax;
+    }
+
+    .footer>div>a {
+        font-size: 1.4vmax;
+    }
+
+    .footer>div:last-child>div {
+        width: 80%;
+        font-size: 1vmax;
+    }
+
+    .footer>div:last-child>button {
+        width: 70%;
+        font-size: 1.2vmax;
+    }
+
+    .footerBorder>div {
+        font-size: 1.2vmax;
+    }
+}

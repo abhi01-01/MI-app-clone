@@ -1,4 +1,4 @@
-.videoCard{
+.videoCard {
     width: 30vmax;
     height: 48vh;
     display: flex;
@@ -11,25 +11,58 @@
     cursor: pointer;
 }
 
-.videoCard > a{
+.videoCard>a {
     padding: 2.5vmax;
     transition: all 0.5s;
     border: none;
     border-radius: 100%;
-    background-color: rgba(255,255,255,0.096);
-    
+    background-color: rgba(255, 255, 255, 0.096);
 }
 
-.videoCard > a > svg{
-    fill: rgb(255,255,255);
+.videoCard>a>svg {
+    fill: rgb(255, 255, 255);
 }
 
-.videoCard:hover a{
-    background-color: rgba(255,255,255,0.671);
-    
+.videoCard:hover a {
+    background-color: rgba(255, 255, 255, 0.671);
 }
- 
-.videoCard p{
+
+.videoCard p {
     color: white;
     padding: 1vmax;
+}
+
+/* Responsive for tablets and smaller screens */
+@media (max-width: 768px) {
+    .videoCard {
+        width: 40vmax;
+        height: 45vh;
+        margin: 1vmax;
+    }
+
+    .videoCard>a {
+        padding: 3vmax;
+    }
+
+    .videoCard p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive for phones */
+@media (max-width: 480px) {
+    .videoCard {
+        width: 80vmax;
+        height: 40vh;
+        margin: 2vmax;
+    }
+
+    .videoCard>a {
+        padding: 5vmax;
+    }
+
+    .videoCard p {
+        font-size: 1rem;
+        padding: 0.5vmax;
+    }
 }

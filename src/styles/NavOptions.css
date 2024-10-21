@@ -1,8 +1,35 @@
-.navOptions{
+.navOptions {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
     justify-content: space-evenly;
     padding: 2vmax;
     z-index: 1000;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+    .navOptions {
+        flex-wrap: nowrap;
+        /* Do not wrap on larger screens */
+        padding: 1.5vmax;
+    }
+}
+
+/* Styles for laptops and desktops */
+@media (min-width: 1024px) {
+    .navOptions {
+        justify-content: space-between;
+        /* More space between items on larger screens */
+        padding: 1vmax;
+    }
+}
+
+/* Styles for mobile phones */
+@media (max-width: 767px) {
+    .navOptions {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+        padding: 3vmax;
+    }
 }

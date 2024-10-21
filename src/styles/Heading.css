@@ -1,19 +1,53 @@
-.heading{
+.heading {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    /* Ensures wrapping on smaller screens */
 }
 
-.heading div{
-    background-color: rgba(39,39,39,0.274);
+.heading div {
+    background-color: rgba(39, 39, 39, 0.274);
     height: 1px;
     width: 30vw;
+    /* Adjusts width based on viewport width */
 }
 
-.heading p{
+.heading p {
     margin: 3vmax;
-    color: rgb(77,77,77);
+    color: rgb(77, 77, 77);
     font-size: 2.5vmax;
-    font-family: Calibri,"Trebuchet MS" ,sans-serif ;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
     font-weight: 100;
+}
+
+/* Tablets and laptops */
+@media (max-width: 1024px) {
+    .heading div {
+        width: 40vw;
+        /* Adjust width for medium screens */
+    }
+
+    .heading p {
+        font-size: 3vmax;
+        /* Slightly increase font size */
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    .heading {
+        flex-direction: column;
+        /* Stack elements vertically on small screens */
+    }
+
+    .heading div {
+        width: 50vw;
+        /* Increase width on smaller screens */
+    }
+
+    .heading p {
+        font-size: 4vmax;
+        /* Increase font size for better readability */
+    }
 }
